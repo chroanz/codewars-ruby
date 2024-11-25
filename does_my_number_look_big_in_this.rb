@@ -1,3 +1,5 @@
+# My solution
+
 def is_narcissistic(n)
     len = Math.log10(n.to_i.abs).to_i + 1
     conv = n.to_s.chars
@@ -12,4 +14,8 @@ def is_narcissistic(n)
     return false
 end
 
-is_narcissistic 153
+# Best solution
+
+def narcissistic?(n)
+    n == n.digits.map { |d| d**n.digits.size } .sum
+end
