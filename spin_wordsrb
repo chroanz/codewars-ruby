@@ -1,0 +1,23 @@
+# My solution
+
+def spin_words(string)
+  Array word = string.split(" ")
+  word.map{|w| w.length >= 5 ? w = w.reverse : w}.join(" ")
+end
+
+# Most voted
+
+def spinWords(string)
+  string.gsub(/\w{5,}/, &:reverse)
+end
+
+# Sugestion
+
+def spin_words(string)
+  string.split.map { |w| w.length >= 5 ? w.reverse : w }.join(" ")
+end
+
+# Resumo:
+# Sua solução inicial: funcional, mas com redundâncias e não muito idiomática.
+# Solução mais votada: a mais eficiente e idiomática, mas menos intuitiva para iniciantes.
+# Solução refinada: combina simplicidade, boas práticas e desempenho. Ideal para aprendizado e uso em projetos.
